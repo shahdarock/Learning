@@ -3,18 +3,29 @@
 <head>
     <title>Guess The Number</title>
 <script>
-    var num1= Math.random();
-    var num2= Math.round(num1);
-    if (Math.round(num1) == num2){
-        alert ("you did it")
+    do{
+    var num= Math.round(Math.random()*10);
+    for(var i=1;i<=3;i++)
+    {
+    var userinput= parseInt( prompt("Guess a number from 1 to 10"));
 
+    if(num == userinput) {
+        alert("Congratulations! You Win");
+        break;
+                         }
+    else if(i>2.5)
+        alert("You Lose");
+
+    else
+        alert("Sorry! Incorrrect Answer, Please! Try Again");
     }
-    else{
-        alert("get the hell outta here")
-    }
+    var playagain= confirm("Do you want to play again?");
+        if(!playagain)
+        {alert("Thanks")
+        }
+    } while (playagain);
 </script>
 </head>
 <body>
-
 </body>
 </html>
