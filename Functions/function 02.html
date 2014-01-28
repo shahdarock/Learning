@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function firstfunc(){
+            function secondfunc(){
+                document.write("Inner Function Executed");
+            }
+        return secondfunc();
+        }
+        var a= secondfunc(4);
+        alert (a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
